@@ -1,0 +1,106 @@
+
+* {
+    --div-animation-dur: 0.1s;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#container1, #container2 {
+    width: 100%;
+    display: flex;
+}
+
+#container1 {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 740px;
+    background-color: #a7cd2c;
+    margin: 0 0 20px 0;
+}
+
+#container2 {
+    flex-direction: column;
+    align-items: center;
+}
+
+#board {
+    position: relative;
+    min-height: 700px;
+    height: 700px;
+    min-width: 700px;
+    width: 700px;
+    background-color: white;
+    border-radius: 6px;
+    border: 2px solid black;
+}
+
+.puzzle-piece {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: #e2ddb4;
+    border: 2px solid black;
+    border-radius: 2px;
+    transition:
+        top var(--div-animation-dur) linear,
+        bottom var(--div-animation-dur) linear,
+        left var(--div-animation-dur) linear,
+        right var(--div-animation-dur) linear;
+    cursor: pointer;
+    user-select: none;
+}
+
+#shortcuts-info {
+    margin-left: 100px;
+    width: 330px;
+    background-color: #e2ddb4;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+p {
+    font-size: 18px;
+}
+
+#slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 50%;
+    height: 15px;
+    background: #d3d3d3;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    cursor: pointer;
+    outline: none;
+    margin: 0 0 10px 0;
+}
+
+#slider:hover {
+    opacity: 1;
+}
+
+#slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #0066ff;
+}
+  
+#slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #0066ff;
+}
+
+#slider-text {
+    font-size: 30px;
+    font-weight: bold;
+}

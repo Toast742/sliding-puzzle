@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div id="container1">
+            <div id="board"></div>
+            <div id="shortcuts-info">
+                <div style="width: 100%; height: 40px; display: flex; justify-content: space-between; align-items: center;"><h2>Keybinds:</h2><button onclick="closeKeybinds()" style="width: 40px; height: 40px; font-size: 24px; outline: none;">X</button></div>
+                <div style="width: 100%; display: flex; align-items:center; justify-content: space-between; text-align: center;"><p style="width: 130px">Move Puzzle Pieces</p><p>-</p><p style="width: 175px">Arrow Keys or Left Click on a Puzzle Piece</p></div>
+                <div style="width: 100%; display: flex; align-items:center; justify-content: space-between; text-align: center;"><p style="width: 130px">Reset</p><p>-</p><p style="width: 175px">R</p></div>
+            </div>
+        </div>
+        <div id="container2">
+            <p style="margin: 0 0 10px 0; font-size: 24px;" id="timer">0:00.000</p>
+            <input type="range" min="2" max="12" value="3" id="slider" onkeydown="return false;">
+            <p style="margin: 0;" id="slider-text"></p>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
